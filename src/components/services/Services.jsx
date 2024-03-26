@@ -86,7 +86,7 @@ const Services = () => {
     
         <Fade>
         <h2>
-          In his free time, he likes solving DSA problems and reading thriller novels.
+          In his free time, he likes solving DSA problems. He has solved more than 1000 problems across multiple platforms like Leetcode, GFG, Codeforces, etc. He also likes reading thriller novels.
         </h2>
       </Fade>
       <Fade>
