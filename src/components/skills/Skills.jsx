@@ -39,8 +39,8 @@ const Skills = () => {
       {/* Text Container */}
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow
-          <br /> and move forward
+          
+          <br /> 
         </p>
         <hr />
       </motion.div>
@@ -49,47 +49,209 @@ const Skills = () => {
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <motion.h1>
-            Currently pursuing <motion.b whileHover={{ color: "orange" }}>B.Tech</motion.b> from
-          </motion.h1>
+            I Like <motion.b whileHover={{ color: "orange" }}>Exploring</motion.b>          </motion.h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>NIT </motion.b>Kurukshetra.
+            New <motion.b whileHover={{ color: "orange" }}>Tech</motion.b>.
           </h1>
         </div>
       </motion.div>
 
+
       {/* Tech Stack */}
-      <motion.div className="techStack" variants={variants}>
+      <h1 className="headerSpacing"> Languages I have worked with : <br></br> </h1>
+      <motion.div className="Techs" variants={variants}>
+        {/* <h1 className="languages">Languages I have worked with : <br></br> </h1> */}
+        {/* <br /> */}
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.2, color: "orange"   }}
           whileTap={{ scale: 0.9 }}
         >
           C++
         </motion.div>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.1, color: "orange"   }}
           whileTap={{ scale: 0.9 }}
         >
-          Java
+          JavaScript
         </motion.div>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.1, color: "orange"  }}
           whileTap={{ scale: 0.9 }}
         >
-          React
+          Dart
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"   }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Python
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"   }}
+          whileTap={{ scale: 0.9 }}
+        >
+          SQL
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"   }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Embedded C
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"   }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Assembly
+        </motion.div>
         </motion.div>
         {/* Add more tech buttons */}
-      </motion.div>
 
-      {/* Education Background */}
-      <motion.div className="educationBackground" variants={variants}>
-        <h2>Education Background</h2>
-        <p>Insert your education background here</p>
-      </motion.div>
+        
+        <h1 className="headerSpacing"> Libraries and Frameworks I have worked with : </h1>
+        <div className="Techs">
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+
+          whileTap={{ scale: 0.9 }}
+
+        >
+          ReactJS
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          NextJS
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          ExpressJS
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Node.JS
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        > 
+        Flutter
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          MongoDB
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Postgress
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Framer Motion
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          JQuery
+        </motion.div>
+      {/* </motion.div> */}
+      </div>
+
+      {/* //Names of Tools goes here */}
+
+      <h1 className="headerSpacing"> Software Packages I have worked with : <br></br> </h1>
+      <div className="Techs">
+        
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+
+          whileTap={{ scale: 0.9 }}
+
+        >
+          Git
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Github
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          VS Code
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Android Studio
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        > 
+        Figma
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1,  color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        > 
+        MATLAB
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Quartus Prime
+        </motion.div>
+        <motion.div
+          className="techButton"
+          whileHover={{ scale: 1.1, color: "orange"  }}
+          whileTap={{ scale: 0.9 }}
+        >
+          Arduino IDE
+        </motion.div>
+      {/* </motion.div> */}
+      </div>
 
       {/* List Container */}
       <motion.div className="listContainer" variants={variants}>
