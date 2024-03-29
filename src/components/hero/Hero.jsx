@@ -62,7 +62,7 @@ const Hero = () => {
                 1000,
                 "App Developer",
                 1000,
-                "UI/UX Designer",
+                "Problem Solver",
                 1000,
                 "Engineer",
                 1000,
@@ -81,6 +81,7 @@ const Hero = () => {
               See this website in Terminal
             </motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button> */}
+            <button href="https://google.com">View Resume</button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -96,7 +97,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influencer
+        Software Engineer
       </motion.div>
       <div className="imageContainer">
         <img src="/darth.png" alt="" />
