@@ -26,25 +26,27 @@ const Contact = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
-        formRef.current,
-        "pX_2hasGmGcuvjXIW"
-      )
-      .then(
-        (result) => {
-          setSuccess(true)
-        },
-        (error) => {
-          setError(true);
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_94y20xo",
+  //       "template_v10u2oh",
+  //       formRef.current,
+  //       "pX_2hasGmGcuvjXIW"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         setSuccess(true)
+  //       },
+  //       (error) => {
+  //         setError(true);
+  //       }
+  //     );
+  // };
+
+  //email function would be implemented in the next versions
 
   return (
     <motion.div
@@ -58,15 +60,15 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <span>12114068@nitkkr.ac.in</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
-          <span>Hello street New York</span>
+          <h2>Or, you can find me</h2>
+          <span>wandering around NIT Kurukshetra</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          {/* <h2>Phone</h2>
+          <span>+1 234 5678</span>  */}
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -99,7 +101,7 @@ const Contact = () => {
             />
           </svg>
         </motion.div>
-        <motion.form
+        {/* <motion.form
           ref={formRef}
           onSubmit={sendEmail}
           initial={{ opacity: 0 }}
@@ -112,7 +114,7 @@ const Contact = () => {
           <button>Submit</button>
           {error && "Error"}
           {success && "Success"}
-        </motion.form>
+        </motion.form> */}
       </div>
     </motion.div>
   );

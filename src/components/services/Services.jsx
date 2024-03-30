@@ -48,8 +48,8 @@ const Services = () => {
       {/* Text Container */}
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow
-          <br /> and move forward
+          So you want to know more about me?
+          {/* <br /> Btw, I'm professionally known as Darth InVader. */}
         </p>
         <hr />
       </motion.div>
@@ -65,47 +65,45 @@ const Services = () => {
       </motion.div>
 
       {/* Education Background */}
+      <Zoom>
+      <motion.div
+        className="education"
+        initial={{ y: "100vh" }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 50 }}
+      >
       <motion.div className="educationBackground" variants={variants}>
         <h1>
-        <TypeAnimation 
-              sequence={[
-                "Piyush is an engineering undergrad at NIT Kurukshetra. He is currently in his pre-final year.",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={0}
-            />
+        Piyush is an engineering undergrad at NIT Kurukshetra. He is currently in his pre-final year.
         </h1>
         <br></br>
         <Fade>
-        <h2>
+          <ul>
+        <li className="listItems">
         He is passionate about technology and likes working on Robotics and Web Development projects.
-        </h2>
-        </Fade>
-    
-        <Fade>
-        <h2>
+        </li>        
+        <li>
           In his free time, he likes solving DSA problems. He has solved more than 1000 problems across multiple platforms like Leetcode, GFG, Codeforces, etc. He also likes reading thriller novels.
-        </h2>
-      </Fade>
-      <Fade>
-        <h2>
+        </li>
+        <li>
           He has worked with languages like C++, JS, Python, Assembly, and SQL, and has also completed several Full-Stack projects.
-        </h2>
+          <br />
+        </li>
+        </ul>
       </Fade>
 
       </motion.div>
+      </motion.div>
+      </Zoom>
 
 
 
-      {/* Tech Stack */}
-      <Zoom><h3 className="linksText"> You can find him across the Internet</h3></Zoom>
+      {/* Links */}
+      <Zoom><h1 className="title2"> View other profiles</h1></Zoom>
       <motion.div className="links" variants={variants}>
-      <br></br>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.2, color: "orange" }}
           whileTap={{ scale: 0.9 }}
           onClick={() => redirectTo('https://github.com/Darth-InVader15')}
         >
@@ -113,27 +111,27 @@ const Services = () => {
         </motion.div>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.2, color: "orange" }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => redirectTo('https://www.linkedin.com/in/darthinvader5/')}
+          onClick={() => redirectTo('https://leetcode.com/Darth-InVader15/')}
         >
-          LinkedIn
+          Leetcode
         </motion.div>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.2, color: "orange" }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => redirectTo('piyush.singh1315@gmail.com')}
+          onClick={() => redirectTo('https://auth.geeksforgeeks.org/user/darthinvader')}
         >
-          Email
+          GFG
         </motion.div>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.1, color: "orange" }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => redirectTo('https://www.instagram.com/__i.r.i.d.e.s.c.e.n.t___/')}
+          onClick={() => redirectTo('https://drive.google.com/file/d/1J25Jir1OZNiwZe72KmG_RgLqAwxZThI5/view?usp=drive_link')}
         >
-          Instagram
+          View Resume
         </motion.div>
       </motion.div>
 

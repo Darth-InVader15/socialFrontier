@@ -15,18 +15,23 @@ const Navbar = () => {
         >
           Darth Web
         </motion.span>
+        <div>
+          <a href="https://darthshell.web.app/">Remove animations </a>
+          <a> | </a>
+          <a href="https://drive.google.com/file/d/1J25Jir1OZNiwZe72KmG_RgLqAwxZThI5/view?usp=drive_link"> View Resume</a>
+        </div>
         <div className="social">
-          <a href="#">
-            <img src="/facebook.png" alt="" />
+          <a href="https://github.com/Darth-InVader15">
+            <img src="/github1.png" alt="" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/__i.r.i.d.e.s.c.e.n.t___/">
             <img src="/instagram.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
+          <a href="https://www.linkedin.com/in/darthinvader5/">
+            <img src="/linkedin.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
+          <a href="https://leetcode.com/Darth-InVader15/">
+            <img src="/lc.png" alt="" />
           </a>
         </div>
       </div>

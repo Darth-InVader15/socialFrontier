@@ -95,27 +95,39 @@
       }
     }
   }
+  .head1{
+    font-size: 2em;
+    color: inherit;
+    font-family: inherit;
+    align-items: center;
+    margin-left: 12%;
+    // justify-content: center;
+    // text-align: center;
+  }
+  .head2{
+    font-size: 1.5em;
+    color: inherit;
+    font-family: inherit;
+    align-items: center;
+    margin-left: 12%;
+
+    // justify-content: center;
+    // text-align: center;
+  }
   
-  // .techButton {
-  //   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
-  //   cursor: pointer;
-  //   padding: 8px 16px;
-  //   background-color: rgba(245, 245, 245, 0.365);
-  //   color: orange;
-  //   border-radius: 4px;
-  //   margin-right: 8px;
-  //   margin-bottom: 8px;
-  //   display: inline-block;
-  // }
+  
   .linksText{
     align-content: center;
     font-size: 1.2em;
     color: inherit;
+    flex: flex-start;
     font-family: inherit;
     align-items: center;
     justify-content: center;
     text-align: left;
+    margin-left: 39%;
+    // margin-top: 5%;
+    margin-bottom: 3%;
     
   }
   .links {
@@ -142,41 +154,6 @@
   }
 
 
-  .educationBackground {
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; // Align items to the start of the flex container
-    justify-content: flex-start; // Align content to the start of the flex container
-    text-align: left; // Align text to the left
-  
-    color: inherit; // Inherits the color of the parent element
-    font-family: inherit; // Inherits the font of the parent element
-    font-size: 1.2em; // Increases the font size by 20%
-  
-    h1, h2, h3, h4, h5, h6, p {
-      color: inherit; // Inherits the color of the parent element
-      font-family: inherit; // Inherits the font of the parent element
-      font-size: 30px; // Inherits the font size of the parent element
-    }
-  }
-  // .educationBackground {
-  //   // Inherit font family and color from parent elements
-  //   font-family: inherit;
-  //   color: inherit;
-    
-  //   h2 {
-  //     font-size: 24px;
-  //     font-weight: bold;
-  //     margin-bottom: 10px;
-  //   }
-
-  //   p {
-  //     font-size: 18px;
-  //     font-weight: normal;
-  //   }
-  // }
-
   .techStack {
     display: flex;
     flex-wrap: wrap;
@@ -186,52 +163,5 @@
   }
   
   
-  .listContainer {
-    flex: 2;
-    display: flex;
-    max-width: 1366px;
-    margin: auto;
-
-    @include mobile {
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .box {
-      padding: 50px;
-      border: 0.5px solid gray;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      @include mobile {
-        border: none;
-        align-items: center;
-        gap: 20px;
-        padding: 10px;
-      }
-
-      p {
-        @include mobile {
-          display: none;
-        }
-      }
-
-      button {
-        padding: 10px;
-        background-color: orange;
-        border: none;
-        cursor: pointer;
-
-        @include mobile {
-          background-color: transparent;
-          border: 1px solid orange;
-          border-radius: 5px;
-          color: orange;
-          width: 50%;
-          padding: 5px;
-        }
-      }
-    }
-  }
+  
 }

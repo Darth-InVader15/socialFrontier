@@ -36,6 +36,28 @@
       }
     }
   }
+  .title2{
+    flex: 2;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 40%;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    h1{
+      font-size: 36px;
+      font-weight: 100;
+
+      @include mobile {
+        font-size: 24px;
+      }
+    
+    }
+  }
   .titleContainer {
     flex: 2;
     display: flex;
@@ -143,7 +165,10 @@
 
 
   .educationBackground {
-    padding-left: 50px;
+    // padding-left: 50px;
+    margin-top: 10%;
+    margin-left: 12%;
+    margin-right: 4%;
     display: flex;
     flex-direction: column;
     align-items: flex-start; // Align items to the start of the flex container
@@ -160,22 +185,6 @@
       font-size: 30px; // Inherits the font size of the parent element
     }
   }
-  // .educationBackground {
-  //   // Inherit font family and color from parent elements
-  //   font-family: inherit;
-  //   color: inherit;
-    
-  //   h2 {
-  //     font-size: 24px;
-  //     font-weight: bold;
-  //     margin-bottom: 10px;
-  //   }
-
-  //   p {
-  //     font-size: 18px;
-  //     font-weight: normal;
-  //   }
-  // }
 
   .techStack {
     display: flex;
@@ -185,7 +194,10 @@
     margin-left: 50px;
   }
   
-  
+  .listItems{
+    font-family: inherit;
+    font-size: inherit;
+  }
   .listContainer {
     flex: 2;
     display: flex;

@@ -81,7 +81,7 @@ const Hero = () => {
               See this website in Terminal
             </motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button> */}
-            <button href="https://google.com">View Resume</button>
+            
           </motion.div>
           <motion.img
             variants={textVariants}

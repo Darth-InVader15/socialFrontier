@@ -31,7 +31,7 @@ const variants = {
 };
 
 // Services component
-const Services = () => {
+const Roles = () => {
   const ref = useRef();
 
   // Check if component is in view
@@ -48,8 +48,8 @@ const Services = () => {
       {/* Text Container */}
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow
-          <br /> and move forward
+          Even though I prefer staying indoors
+          <br /> I am always up for a challenge.
         </p>
         <hr />
       </motion.div>
@@ -65,38 +65,49 @@ const Services = () => {
       </motion.div>
 
       {/* Education Background */}
+      <motion.div
+      ref={ref}
+      className="contact"
+      variants={variants}
+      initial="initial"
+      whileInView="animate"
+    >
       <motion.div className="Background" variants={variants}>
-        <h1>
-            <Zoom>Piyush is currently</Zoom>
-            <ul>
+        <h1 className="head1">
+            <span>Piyush is currently</span>
+            <motion.ul variants={variants}>
                 <li>Content Creation Head at Colours | NIT-K</li>
                 <li>Part of Web Development and Embedded Team | NIT-K</li>
-            </ul>
+            </motion.ul>
         </h1>
         <br></br>
         <Fade>
-        <h2 className="head2">
+        <h2 className="head2" whileHover={{ scale: 1.2, color: "orange" }}>
             <motion>Where, he has</motion>
-            <ul>
+            <ul whileHover={{ scale: 1.2, color: "orange" }}>
                 <li>Co-organized 5+ technical workshops on topics like Image Processing, C, Embedded Systems, etc. </li>
                 <li>Conducted 3+ workshops on Content Writing and Creation.</li>
-                <li> Co-organized college events like <span className="Events">TechSpardha'22 '23, Confluence'22 '23, and TEDxNITKKR'23 </span></li>
+                <li> Co-organized college events like <span className="Events" sty>TechSpardha'23 '24, Confluence'22 '23, and TEDxNITKKR'23 </span></li>
             </ul>
+            <br />
         </h2>
         </Fade>
+        </motion.div>
     
-
+        {/* <motion.div className="listContainer" variants={variants}>
+        {/* Content for list container */}
+      {/* </motion.div> */} 
       </motion.div>
 
 
 
       {/* Tech Stack */}
-      <Zoom><h3 className="linksText"> You can find him across the Internet</h3></Zoom>
+      <Zoom><h3 className="linksText"> You can find him across the Internet: </h3></Zoom>
       <motion.div className="links" variants={variants}>
-      <br></br>
+      {/* <br></br> */}
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.2, color: "orange" }}
           whileTap={{ scale: 0.9 }}
           onClick={() => redirectTo('https://github.com/Darth-InVader15')}
         >
@@ -104,7 +115,7 @@ const Services = () => {
         </motion.div>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.2, color: "orange" }}
           whileTap={{ scale: 0.9 }}
           onClick={() => redirectTo('https://www.linkedin.com/in/darthinvader5/')}
         >
@@ -112,21 +123,27 @@ const Services = () => {
         </motion.div>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.2, color: "orange" }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => redirectTo('piyush.singh1315@gmail.com')}
+          onClick={() => redirectTo('mailto:piyush.singh1315@gmail.com')}
         >
           Email
         </motion.div>
         <motion.div
           className="techButton"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.2, color: "orange" }}
           whileTap={{ scale: 0.9 }}
           onClick={() => redirectTo('https://www.instagram.com/__i.r.i.d.e.s.c.e.n.t___/')}
         >
           Instagram
         </motion.div>
+
+        
+        
       </motion.div>
+      <br></br>
+      <br/>
+        {/* <h1>This is just a test</h1> */}
 
       
 
@@ -138,4 +155,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Roles;
