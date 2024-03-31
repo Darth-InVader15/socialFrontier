@@ -18,16 +18,16 @@ This portfolio site is built using ReactJS and utilizes Framer Motion library to
 To run this project locally, follow these steps:
 
 1. Clone the repository: 
-    git clone https://github.com/Darth-InVader15/GUI_Portfolio.git
+    `git clone https://github.com/Darth-InVader15/GUI_Portfolio.git`
 
-2. Navigate into the project directory
-    cd GUI_Portfolio
+2. Navigate into the project directory:
+    `cd GUI_Portfolio`
 
 3. Install dependencies:
-    npm install
+    `npm install`
 
 4. Start the development server: 
-    npm run dev
+    `npm run dev`
 
 5. Open your browser and visit `http://localhost:3000` to view the site.
 
@@ -45,7 +45,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-- [Sass] (https://sass-lang.com/)
+- [Sass](https://sass-lang.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Create React App](https://create-react-app.dev/)
 
