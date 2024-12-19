@@ -58,14 +58,14 @@ const Hero = () => {
               sequence={[
                 "Piyush Singh",
                 2000,
-                "Web Developer",
+                "i.r.i.d.e.s.c.e.n.t",
                 1000,
-                "App Developer",
+                "Darth InVader",
                 1000,
-                "Problem Solver",
-                1000,
-                "Engineer",
-                1000,
+                // "Problem Solver",
+                // 1000,
+                // "Engineer",
+                // 1000,
                 // "Competitive Programmer",
                 // 1000,
                 // "Electrical Engineer",
@@ -97,7 +97,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Software Engineer
+        Darth Net
       </motion.div>
       <div className="imageContainer">
         <img src="/darth.png" alt="" />
