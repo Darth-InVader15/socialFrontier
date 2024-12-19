@@ -13,7 +13,7 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         > */}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', marginRight: '50px' }}>
             <span style={{justifyContent: 'center'}}> Darth Web </span>
           </div>
         {/* </motion.span> */}

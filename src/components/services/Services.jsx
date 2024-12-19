@@ -58,7 +58,7 @@ const Services = () => {
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <motion.h1>
-            Hello <motion.b whileHover={{ color: "orange" }}>World</motion.b> !
+                       Hello <motion.b animate={{ color: ["#ffffff", "#ffa500", "#ffffff"] }} transition={{ repeat: Infinity, duration: 5 }}>World</motion.b> !
           </motion.h1>
         </div>
        
@@ -68,27 +68,29 @@ const Services = () => {
       <Zoom>
       <motion.div
         className="education"
-        initial={{ y: "100vh" }}
+        // initial={{ y: "100vh" }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 50 }}
       >
       <motion.div className="educationBackground" variants={variants}>
         <h1>
-        Piyush is an engineering undergrad at NIT Kurukshetra. He is currently in his pre-final year.
+        This website is created by Piyush Singh
         </h1>
         <br></br>
         <Fade>
           <ul>
         <li className="listItems">
-        He is passionate about technology and likes working on Robotics and Web Development projects.
+        Initially he wanted to add some details about himself, but then he thought why bother?
         </li>        
         <li>
-          In his free time, he likes solving DSA problems. He has solved more than 1000 problems across multiple platforms like Leetcode, GFG, Codeforces, etc. He also likes reading thriller novels.
+          Instead, here's a photo of a cat
         </li>
-        <li>
-          He has worked with languages like C++, JS, Python, Assembly, and SQL, and has also completed several Full-Stack projects.
-          <br />
-        </li>
+        <>
+
+            <img src="https://cataas.com/cat" alt="Random Cat" style={{ alignItems: 'center', maxWidth: '40%', height: 'auto', marginLeft: '40px', marginTop: '40px' }}/>
+            <br />
+          
+        </>
         </ul>
       </Fade>
 
@@ -98,7 +100,7 @@ const Services = () => {
 
 
 
-      {/* Links */}
+      {/* Links
       <Zoom><h1 className="title2"> View other profiles</h1></Zoom>
       <motion.div className="links" variants={variants}>
         <motion.div
@@ -133,7 +135,7 @@ const Services = () => {
         >
           View Resume
         </motion.div>
-      </motion.div>
+      </motion.div> */}
 
       
 
