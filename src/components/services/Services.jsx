@@ -48,7 +48,7 @@ const Services = () => {
       {/* Text Container */}
       <motion.div className="textContainer" variants={variants}>
         <p>
-          So you want to know more about me?
+          Samose {`>>`} Pizza
           {/* <br /> Btw, I'm professionally known as Darth InVader. */}
         </p>
         <hr />
@@ -58,7 +58,7 @@ const Services = () => {
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <motion.h1>
-                       Hello <motion.b animate={{ color: ["#ffffff", "#ffa500", "#ffffff"] }} transition={{ repeat: Infinity, duration: 5 }}>World</motion.b> !
+                       Hello <motion.b animate={{ color: ["#ffffff", "#ffa500", "#ffffff"] }} transition={{ repeat: Infinity, duration: 3 }}>World</motion.b> !
           </motion.h1>
         </div>
        
@@ -74,69 +74,30 @@ const Services = () => {
       >
       <motion.div className="educationBackground" variants={variants}>
         <h1>
-        This website is created by Piyush Singh
+        This website is just a fun project
         </h1>
         <br></br>
         <Fade>
           <ul>
         <li className="listItems">
-        Initially he wanted to add some details about himself, but then he thought why bother?
+        Initially I wanted to add some details, but then I thought why bother?
         </li>        
         <li>
-          Instead, here's a photo of a cat
+          Instead, here's a cat
         </li>
-        <>
-
-            <img src="https://cataas.com/cat" alt="Random Cat" style={{ alignItems: 'center', maxWidth: '40%', height: 'auto', marginLeft: '40px', marginTop: '40px' }}/>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', marginRight: '50px' }}>
+        {/* the cat api was unresponsive so i had to comment it out */}
+            <img src="https://cataas.com/cat" alt="Random Cat" style={{ alignItems: 'center', maxWidth: '50%', height: 'auto', marginLeft: '40px', marginTop: '40px' }}/>
             <br />
+            <img src="/cat.gif" alt="Random Cat" style={{ alignItems: 'center', maxWidth: '50%', height: 'auto', marginLeft: '20px', marginTop: '40px' }}/>
           
-        </>
+        </div>
         </ul>
       </Fade>
 
       </motion.div>
       </motion.div>
       </Zoom>
-
-
-
-      {/* Links
-      <Zoom><h1 className="title2"> View other profiles</h1></Zoom>
-      <motion.div className="links" variants={variants}>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange" }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => redirectTo('https://github.com/Darth-InVader15')}
-        >
-          Github
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange" }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => redirectTo('https://leetcode.com/Darth-InVader15/')}
-        >
-          Leetcode
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange" }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => redirectTo('https://auth.geeksforgeeks.org/user/darthinvader')}
-        >
-          GFG
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.1, color: "orange" }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => redirectTo('https://drive.google.com/file/d/1J25Jir1OZNiwZe72KmG_RgLqAwxZThI5/view?usp=drive_link')}
-        >
-          View Resume
-        </motion.div>
-      </motion.div> */}
-
       
 
       {/* List Container */}

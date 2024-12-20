@@ -9,6 +9,7 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
 import Skills from "./components/skills/Skills";
 import Roles from "./components/roles/Roles";
+import Newport from "./components/portfolio/Newport";
 const App = () => {
   return (
     <div>
@@ -32,7 +33,7 @@ const App = () => {
       <section id="Projects">
         <Parallax type="portfolio" />
       </section>
-      <Portfolio />
+      <Newport />
       <section id="Roles">
         <Roles />
       </section>

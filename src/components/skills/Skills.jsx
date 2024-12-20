@@ -1,8 +1,9 @@
-// Imports
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Skills.scss";
 import { motion, useInView } from "framer-motion";
 import { Zoom } from "react-reveal";
+import TechButton from '../TechButton';
+import NewSkills from "./newSkills";
 
 // Variants for animation
 const variants = {
@@ -20,14 +21,31 @@ const variants = {
       staggerChildren: 0.1,
     },
   },
+  exit: {
+    x: 500,
+    opacity: 0,
+    transition: {
+      duration: 1,
+    },
+  },
 };
 
 // Services component
 const Skills = () => {
   const ref = useRef();
+  const [showNewContent, setShowNewContent] = useState(false);
 
   // Check if component is in view
   const isInView = useInView(ref, { margin: "-100px" });
+
+  // Automatically switch content after a delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNewContent(true);
+    }, 10000); // 5 seconds delay
+
+    return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, []);
 
   return (
     <motion.div
@@ -36,6 +54,7 @@ const Skills = () => {
       initial="initial"
       ref={ref}
       animate={"animate"}
+      exit="exit"
     >
       {/* Text Container */}
       <motion.div className="textContainer" variants={variants}>
@@ -50,7 +69,8 @@ const Skills = () => {
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <motion.h1>
-            I Like <motion.b whileHover={{ color: "orange" }}>Exploring</motion.b>          </motion.h1>
+            I Like <motion.b whileHover={{ color: "orange" }}>Exploring</motion.b>
+          </motion.h1>
         </div>
         <div className="title">
           <h1>
@@ -59,256 +79,65 @@ const Skills = () => {
         </div>
       </motion.div>
 
-
       {/* Tech Stack */}
-      <Zoom>
-      <h1 className="headerSpacing"> Languages I have worked with : <br></br> </h1>
-      <motion.div className="Techs" variants={variants}>
-        {/* <h1 className="languages">Languages I have worked with : <br></br> </h1> */}
-        {/* <br /> */}
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}
-          initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          C++
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          JavaScript
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Dart
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Python
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          SQL
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Embedded C
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Assembly
-        </motion.div>
-        </motion.div>
-        {/* Add more tech buttons */}
+      <div>
+        <Zoom>
+          
+          <motion.div className="Techs" variants={variants}>
+            {showNewContent ? (
+              <motion.div
+                initial={{ x: -500, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <NewSkills />
+              </motion.div>
+            ) : (
+              <>
+                <h1 className="headerSpacing"> Languages I have worked with : <br></br> </h1>
+                <div className="Techs">
+                <TechButton>C++</TechButton>
+                <TechButton>JavaScript</TechButton>
+                <TechButton>Dart</TechButton>
+                <TechButton>Python</TechButton>
+                <TechButton>SQL</TechButton>
+                <TechButton>Embedded C</TechButton>
+                <TechButton>Assembly</TechButton>
+                </div>
 
-        
-        <h1 className="headerSpacing"> Libraries and Frameworks I have worked with : </h1>
-        <div className="Techs">
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          ReactJS
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          NextJS
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          ExpressJS
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Node.JS
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        > 
-        Flutter
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          MongoDB
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Postgress
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Framer Motion
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          JQuery
-        </motion.div>
-      {/* </motion.div> */}
+                <h1 className="headerSpacing"> Libraries and Frameworks I have worked with : </h1>
+            <div className="Techs">
+              <TechButton>ReactJS</TechButton>
+              <TechButton>NextJS</TechButton>
+              <TechButton>ExpressJS</TechButton>
+              <TechButton>Node.JS</TechButton>
+              <TechButton>Flutter</TechButton>
+              <TechButton>MongoDB</TechButton>
+              <TechButton>Postgress</TechButton>
+              <TechButton>Framer Motion</TechButton>
+              <TechButton>JQuery</TechButton>
+            </div>
+
+            <h1 className="headerSpacing"> Software Packages I have worked with : <br></br> </h1>
+            <div className="Techs">
+              <TechButton>Git</TechButton>
+              <TechButton>Github</TechButton>
+              <TechButton>Linux</TechButton>
+              <TechButton>VS Code</TechButton>
+              <TechButton>Android Studio</TechButton>
+              <TechButton>Figma</TechButton>
+              <TechButton>MATLAB</TechButton>
+              <TechButton>Quartus Prime</TechButton>
+              <TechButton>Arduino IDE</TechButton>
+            </div>
+
+              </>
+            )}
+          </motion.div>
+
+          
+        </Zoom>
       </div>
-
-      {/* //Names of Tools goes here */}
-
-      <h1 className="headerSpacing"> Software Packages I have worked with : <br></br> </h1>
-      <div className="Techs">
-        
-      <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Git
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Github
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Linux
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          VS Code
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Android Studio
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-        Figma
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-        MATLAB
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Quartus Prime
-        </motion.div>
-        <motion.div
-          className="techButton"
-          whileHover={{ scale: 1.2, color: "orange"   }}
-          whileTap={{ scale: 0.9 }}initial={{ y: "100vh" }} // start from the bottom of the page
-          animate={{ y: 0 }} // animate to its original position
-          transition={{ type: "spring", stiffness: 50 }} // adjust the transition as needed
-        >
-          Arduino IDE
-        </motion.div>
-      {/* </motion.div> */}
-      </div>
-      </Zoom>
 
       {/* List Container */}
       <motion.div className="listContainer" variants={variants}>

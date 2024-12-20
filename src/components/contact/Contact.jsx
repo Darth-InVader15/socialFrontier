@@ -60,7 +60,7 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>12114068@nitkkr.ac.in</span>
+          <span>Bkl dm kar de</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Or, you can find me</h2>
@@ -76,7 +76,7 @@ const Contact = () => {
           className="phoneSvg"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
-          transition={{ delay: 3, duration: 1 }}
+          transition={{ delay: 6, duration: 1 }}
         >
           <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path

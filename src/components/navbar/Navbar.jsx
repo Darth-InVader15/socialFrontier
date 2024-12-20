@@ -26,7 +26,7 @@ const Navbar = () => {
           <a href="https://www.facebook.com/officialPirate">
             <img src="/facebook.png" alt="" />
           </a>
-          <a href="https://www.instagram.com/__i.r.i.d.e.s.c.e.n.t___/">
+          <a href="https://www.instagram.com/piyushh.xyz/">
             <img src="/instagram.png" alt="" />
           </a>
           {/* <a href="https://www.linkedin.com/in/darthinvader5/">
