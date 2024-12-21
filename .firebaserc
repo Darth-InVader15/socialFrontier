@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "darthweb"
-  }
+    "default": "",
+    "ghostisme": "piyush-is-online"
+  },
+  "targets": {},
+  "etags": {}
 }
